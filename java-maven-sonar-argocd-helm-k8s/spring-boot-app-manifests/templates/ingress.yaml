@@ -11,6 +11,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: webapp-svc
+            name: spring-boot-app-svc
             port: 
               number: {{ .Values.service.clusterIPPort }}
