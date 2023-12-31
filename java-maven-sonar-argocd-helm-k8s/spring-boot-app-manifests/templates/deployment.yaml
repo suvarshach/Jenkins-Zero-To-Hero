@@ -2,21 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.deployment.name }}
+  labels:
+    app: spring-boot-app
 spec:
-  replicas: {{ .Values.deployment.replicaCount }}
+  replicas: 2
   selector:
     matchLabels:
-      app: webapp
+      app: spring-boot-app
   template:
     metadata:
       labels:
-        app: webapp
+        app: spring-boot-app
     spec:
       containers:
-      - image: {{ .Values.image.repository }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
-        name: {{ .Values.image.containerName }}
+      - name:  spring-boot-app
+        image: abhishekf5/ultimate-cicd:replaceImageTag
         ports:
         - containerPort: {{ .Values.image.containerPort }}
-      imagePullSecrets:
-      - name: {{ .Values.image.imagePullSecrets }}
