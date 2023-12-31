@@ -1,6 +1,6 @@
 deployment:
-  name: webapp-deployment
-  replicaCount: 3
+  name: spring-boot-app
+ 
 
 image:
   repository: artisantek/useraccount:1
