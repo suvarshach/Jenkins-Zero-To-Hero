@@ -3,11 +3,7 @@ deployment:
  
 
 image:
-  repository: artisantek/useraccount:1
-  pullPolicy: Always
-  containerName: useraccount
-  imagePullSecrets: dockerhub
-  containerPort: 3080
+  containerPort: 8080
   
 service:
   type: ClusterIP
