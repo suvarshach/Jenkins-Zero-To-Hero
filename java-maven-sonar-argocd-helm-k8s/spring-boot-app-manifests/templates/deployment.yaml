@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name:  {{ .Values.image.containerName }}
-        image: {{ .Values.image.repository }}
+        image: abhishekf5/ultimate-cicd:replaceImageTag
         ports:
         - containerPort: {{ .Values.image.containerPort }}
