@@ -16,7 +16,7 @@ pipeline{
 	}
 	stage(dockerbuild){
             steps{
-                sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && docker build -t image:varsha .'
+                sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && docker build -t image:spring .'
             }
         }
         stage(push){
