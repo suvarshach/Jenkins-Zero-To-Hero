@@ -15,7 +15,7 @@ spec:
         app: spring-boot-app
     spec:
       containers:
-      - name:  spring-boot-app
-        image: abhishekf5/ultimate-cicd:replaceImageTag
+      - name:  {{ .Values.image.containerName }}
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         ports:
         - containerPort: {{ .Values.image.containerPort }}
