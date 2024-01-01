@@ -21,8 +21,9 @@ pipeline{
         }
         stage(push){
             steps{
-                sh 'docker tag image: var suvarsha/helm2k8s:indiaeatz'
-                sh 'docker push suvarsha/helm2k8s:indiaeatz'
+                sh 'docker tag image:spring 143120575359.dkr.ecr.ap-south-1.amazonaws.com/varsha2023:ch'
+                sh 'docker push 143120575359.dkr.ecr.ap-south-1.amazonaws.com/varsha2023:ch'
+
             }
         }
 	stage('Update Deployment File') {
