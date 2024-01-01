@@ -3,7 +3,12 @@ deployment:
  
 
 image:
-  containerPort: 8080
+  repository: 143120575359.dkr.ecr.ap-south-1.amazonaws.com/varsha2023
+  tag: ch
+  pullPolicy: Always
+  containerName: spring-boot-app
+  imagePullSecrets: ecr-registry-secret
+  containerPort: 8080  # Update with the correct port if needed
   
 service:
   type: ClusterIP
